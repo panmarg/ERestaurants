@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUserImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#BDBCBC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBackCirceArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_back_circle_arrow"
+            app:layout_constraintStart_toStartOf="@+id/clUserImage"
+            app:layout_constraintTop_toTopOf="@+id/clUserImage" />
+
+
+        <ImageView
+            android:id="@+id/ivUserImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/user_photo_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MARC CUBAN"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/ivUserImage"
+            app:layout_constraintStart_toStartOf="@+id/ivUserImage"
+            app:layout_constraintTop_toBottomOf="@+id/ivUserImage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUserCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:background="@drawable/user_profile_background"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/clUserImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clUserImage">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/clUserCard">
+
+            <TextView
+                android:id="@+id/tvUserReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="Reviews"
+                android:textColor="#2AD16F"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvUserReviewsCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvUserReviews"
+                app:layout_constraintStart_toStartOf="@+id/tvUserReviews"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserReviews" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:id="@+id/reviewsSeperator"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="-10dp"
+            android:background="#BDBCBC"
+            app:layout_constraintBottom_toBottomOf="@+id/clReviews"
+            app:layout_constraintStart_toEndOf="@+id/clReviews" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/reviewsSeperator"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvUserComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comments"
+                android:textColor="#2AD16F"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvUserCommentsCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvUserComments"
+                app:layout_constraintStart_toStartOf="@+id/tvUserComments"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserComments" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/clUserCard"
+            app:layout_constraintTop_toTopOf="@+id/clUserCard">
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUserDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingStart="40dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/clUserStats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clUserCard">
+
+        <ImageView
+            android:id="@+id/ivUserEmail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/ic_email"
+            android:backgroundTint="#2AD16F"
+            app:layout_constraintBottom_toBottomOf="@+id/tvUserEmail"
+            app:layout_constraintEnd_toStartOf="@+id/tvUserEmail"
+            app:layout_constraintTop_toTopOf="@+id/tvUserEmail" />
+
+        <TextView
+            android:id="@+id/tvUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="marc-cuban@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/clUserDetails"
+            app:layout_constraintStart_toStartOf="@+id/clUserDetails"
+            app:layout_constraintTop_toTopOf="@+id/clUserDetails" />
+
+
+        <ImageView
+            android:id="@+id/ivUserPhone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/ic_phone"
+            android:backgroundTint="#2AD16F"
+            app:layout_constraintBottom_toBottomOf="@+id/tvUserPhone"
+            app:layout_constraintEnd_toStartOf="@+id/tvUserPhone"
+            app:layout_constraintTop_toTopOf="@+id/tvUserPhone" />
+
+        <TextView
+            android:id="@+id/tvUserPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="+222 022 222"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvUserEmail"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserEmail" />
+
+
+        <ImageView
+            android:id="@+id/ivUserInstagram"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/ic_instagram"
+            android:backgroundTint="#2AD16F"
+            app:layout_constraintBottom_toBottomOf="@+id/tvUserInstagram"
+            app:layout_constraintEnd_toStartOf="@+id/tvUserInstagram"
+            app:layout_constraintTop_toTopOf="@+id/tvUserInstagram" />
+
+
+        <TextView
+            android:id="@+id/tvUserInstagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="marccuban22"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvUserPhone"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserPhone" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUserStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@+id/clUserDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clUserDetails" />
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcvUserStats"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/clUserStats"
+        app:layout_constraintTop_toTopOf="@+id/clUserStats" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

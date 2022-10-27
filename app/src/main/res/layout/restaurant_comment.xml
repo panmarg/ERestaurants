@@ -1,0 +1,72 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clComment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="9dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="@+id/clComment"
+        app:layout_constraintTop_toTopOf="@+id/clComment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clUserComment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/clUserComment"
+                app:layout_constraintTop_toTopOf="@+id/clUserComment" />
+
+
+            <TextView
+                android:id="@+id/tvUserComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/tvUsername"
+                app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
+
+
+
+            <TextView
+                android:id="@+id/tvUserCommentDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#BDBCBC"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="@+id/tvUserComment"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserComment" />
+
+
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
